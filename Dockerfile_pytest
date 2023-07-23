@@ -1,0 +1,25 @@
+# Use a base image with the desired Python version
+from python:3.9-slim
+
+# Set a working directory inside the container
+WORKDIR /tests
+
+# Copy the requirements file to the container
+COPY requirement.txt .
+
+RUN apt update \
+    && apt install curl -y \
+    && apt install curl -y \
+    && apt install jq -y \
+    && apt install python3-tk -y
+
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirement.txt
+
+#Copy the Testsuite under container
+COPY tests /tests
+
+
+#Run pytest to execute the entire test suite
+CMD ["pytest","tests"]
