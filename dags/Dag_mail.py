@@ -54,14 +54,14 @@ def hpe_email():
 
 #Task 1 :Print current date using Bash Operator
 print_date=BashOperator(
-     task_id='Print Date',
+     task_id='Print_Date',
      bash_command='date',
      dag=dag
 )
 
 #Task 2: Send Mail using smtp and pythonoperator
 mail_send=PythonOperator(
-      task_id='Mail_Sending Task',
+      task_id='Mail_Sending_Task',
       python_callable=hpe_email,
       dag=dag
 )
