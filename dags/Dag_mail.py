@@ -12,6 +12,7 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),  # Retry after 5 minutes if a task fails
+
 }
 
 dag=DAG(
@@ -21,6 +22,13 @@ dag=DAG(
      schedule_interval=None,
      start_date=days_ago(2),
      catchup=False
+     access_control={
+            'All':{
+			'can_read',
+			'can_edit',
+			'can_delete'
+		}
+     }
 
 )
 
