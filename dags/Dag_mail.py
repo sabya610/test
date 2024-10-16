@@ -21,7 +21,7 @@ dag=DAG(
      description='Simple task to send mail',
      schedule_interval=None,
      start_date=days_ago(2),
-     catchup=False
+     catchup=False,
      access_control={
             'All':{
 			'can_read',
