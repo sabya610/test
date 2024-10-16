@@ -19,6 +19,7 @@ dag=DAG(
      default_args=default_args,
      description='Simple task to send mail',
      schedule_interval='None',
+     start_date=days_ago(2),
      catchup=False
 
 )
