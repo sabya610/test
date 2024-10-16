@@ -38,8 +38,8 @@ def hpe_email():
  
     print(f"%%%%%%%%% MESSAGE = {message} %%%%%%%%")
  
-    sender = 'rakesh.singh2@hpe.com'
-    receivers = 'rksingh61@yahoo.com'
+    sender = 'sabyasachi.mallik@hpe.com'
+    receivers = 'sabyasachi.mallik@hpe.com'
  
     try:
         smtpObj = smtplib.SMTP('smtp.its.hpecorp.net')
