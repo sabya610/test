@@ -21,6 +21,13 @@ dag = DAG(
     schedule_interval=timedelta(days=1),  # Runs every day
     start_date=days_ago(2),  # Start date is 2 days ago
     catchup=False,  # Do not backfill if start date is in the past
+    access_control={
+		'All': {
+			'can_read',
+			'can_edit',
+			'can_delete'
+		}
+	}
 )
 
 # Task 1: Print the current date using BashOperator
