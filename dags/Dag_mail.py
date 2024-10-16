@@ -32,7 +32,7 @@ def hpe_email():
     date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
  
     SUBJECT = "SMTP e-mail test"
-    TEXT = f"Hello RK, How are you doing {date_time}"
+    TEXT = f"Hello , How are you doing {date_time}"
  
     message = f'Subject: {SUBJECT}\n\n{TEXT}'
  
