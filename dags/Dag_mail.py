@@ -33,7 +33,7 @@ dag=DAG(
 )
 
 
-
+# Mail sending function
 def hpe_email():
  
     now = datetime.now() # current date and time
