@@ -53,7 +53,7 @@ def hpe_email():
     smtpObj.close()
 
 #Task 1 :Print current date using Bash Operator
-print_date=BashOPerator(
+print_date=BashOperator(
      task_id='Print Date',
      bash_command='date',
      dag=dag
