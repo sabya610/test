@@ -1,3 +1,4 @@
+## Importing libraries
 import smtplib
 from airflow import DAG
 from datetime import datetime, timedelta
@@ -14,7 +15,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),  # Retry after 5 minutes if a task fails
 
 }
-
+# Creation of worklfow
 dag=DAG(
      'simple_mail',
      default_args=default_args,
