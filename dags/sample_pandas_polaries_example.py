@@ -44,6 +44,14 @@ def process_with_pandas():
                                                                                             task_id='process_with_polars',
                                                                                                     python_callable=process_with_polars,
                                                                                                         )
+                                                                            access_control={
+                                                                                            'All': {
+                                                                                                            'can_read',
+                                                                                                                        'can_edit',
+                                                                                                                                    'can_delete'
+                                                                                                                                            }
+                                                                                                }
+                                                                            )
 
                                                                                 # Define task dependencies
                                                                                     task_pandas >> task_polars
