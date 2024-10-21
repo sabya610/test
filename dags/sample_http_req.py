@@ -21,7 +21,7 @@ dag = DAG(
     'simple_dag_example',
     default_args=default_args,
     description='A simple DAG with two tasks',
-    schedule_interval=timedelta(days=1),  # Runs every day
+    schedule_interval= '*/10 * * * *',  # Runs every 10 minutes per day
     start_date=days_ago(2),  # Start date is 2 days ago
     catchup=False,  # Do not backfill if start date is in the past
     access_control={
