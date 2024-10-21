@@ -33,6 +33,14 @@ with DAG(
         'retries': 1,
     },
     schedule_interval='@daily',  # Adjust the schedule as needed
+    access_control={
+            'All':{
+			'can_read',
+			'can_edit',
+			'can_delete'
+		}
+     }
+
 ) as dag:
     
     task_pandas = PythonOperator(
