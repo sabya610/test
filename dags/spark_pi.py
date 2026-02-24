@@ -31,6 +31,7 @@ dag = DAG(
             pattern=r"^$|^\S+/$",
             description="Airgap registry url. Trailing slash in the end is required",
         ),
+        "email": Param("airflow@example.com", type=string,description="Enter EMail ID"),
     },
     render_template_as_native_obj=True,
     access_control={"All": {"can_read", "can_edit", "can_delete"}},
