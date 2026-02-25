@@ -49,13 +49,6 @@ with DAG(
         bash_command="echo 'Running Bash Task from Airflow!'",
     )
 
-    # Task 3: Email operator (optional)
-    email_task = EmailOperator(
-        task_id="send_email",
-        to="airflow@example.com",
-        subject="Airflow DAG Success",
-        html_content="<h3>Your DAG ran successfully!</h3>",
-    )
 
     # Task dependencies
-    python_task >> bash_task >> email_task
+    python_task >> bash_task 
